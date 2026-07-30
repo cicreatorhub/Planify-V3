@@ -13,17 +13,17 @@ export default function Sidebar() {
   const menu = [
     {
       name: "Dashboard",
-      icon: <LayoutDashboard size={16} />,
+      icon: <LayoutDashboard size={14} />,
       path: "/"
     },
     {
       name: "Calendar",
-      icon: <CalendarDays size={16} />,
+      icon: <CalendarDays size={14} />,
       path: "/calendar"
     },
     {
       name: "Analytics",
-      icon: <BarChart3 size={16} />,
+      icon: <BarChart3 size={14} />,
       path: "/analytics"
     }
   ];
@@ -33,7 +33,7 @@ export default function Sidebar() {
 
       <div className="logo">
 
-        <CheckSquare size={30} />
+        <CheckSquare size={25} />
 
         <div>
           <h2>Planify</h2>
@@ -44,7 +44,7 @@ export default function Sidebar() {
 
       <button className="new-task-btn">
 
-        <PlusCircle size={16} />
+        <PlusCircle size={14} />
 
         <span>New Task</span>
 
@@ -74,7 +74,7 @@ export default function Sidebar() {
 
         <button className="settings-btn">
 
-          <Settings size={18} />
+          <Settings size={16} />
 
           <span>Settings</span>
 
