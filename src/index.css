@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+:root{
+  --primary:#4f46e5;
+  --primary-dark:#4338ca;
+  --success:#10b981;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+
+  --bg:#f4f7fb;
+  --surface:#ffffff;
+  --border:#e5e7eb;
+
+  --text:#111827;
+  --text-light:#6b7280;
+
+  --radius:16px;
+
+  --shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
+
+input,
+select,
+textarea{
+  font-family:inherit;
+}
+
+.app{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:260px;
+  background:#111827;
+  color:white;
+}
+
+.main-content{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.page-container{
+  padding:30px;
+}
+
+.card{
+  background:var(--surface);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px;
+}
+
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+.grid-2{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.grid-3{
+  grid-template-columns:repeat(3,1fr);
+}
+
+.grid-4{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.btn{
+  border:none;
+  border-radius:10px;
+  padding:12px 18px;
+  font-weight:600;
+}
+
+.btn-primary{
+  background:var(--primary);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:var(--primary-dark);
+}
+
+input,
+select{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  outline:none;
+}
+
+input:focus,
+select:focus{
+  border-color:var(--primary);
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 10px;
+  border-radius:999px;
+  color:white;
+  font-size:.8rem;
+  font-weight:600;
+}
+
+.badge.high{
+  background:var(--danger);
+}
+
+.badge.medium{
+  background:var(--warning);
+}
+
+.badge.low{
+  background:var(--success);
+}
+
+@media(max-width:1024px){
+
+.sidebar{
+  display:none;
+}
+
+.page-container{
+  padding:20px;
+}
+
+.grid-4,
+.grid-3,
+.grid-2{
+  grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.page-container{
+  padding:16px;
+}
+
+}
