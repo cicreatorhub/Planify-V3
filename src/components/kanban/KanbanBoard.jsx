@@ -44,9 +44,9 @@ export default function KanbanBoard() {
   return (
     <div className="card">
 
-      <h2 style={{ marginBottom: 20 }}>
+      <h3 style={{ marginBottom: 20 }}>
         Kanban Board
-      </h2>
+      </h3>
 
       <DragDropContext
         onDragEnd={onDragEnd}
