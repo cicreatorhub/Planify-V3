@@ -55,24 +55,26 @@ export function TaskProvider({ children }) {
   // CRUD
   // ------------------------
 
-  const addTask = ({
+const addTask = ({
+  title,
+  priority,
+  dueDate,
+  category = "General"
+}) => {
+
+  const task = {
+    id: uuid(),
     title,
     priority,
     dueDate,
-    category = "General"
-  }) => {
-    const task = {
-      id: uuid(),
-      title,
-      priority,
-      dueDate,
-      category,
-      completed: false,
-      createdAt: new Date().toISOString()
-    };
-
-    setTasks(prev => [task, ...prev]);
+    category,
+    completed: false,
+    status: "todo",
+    createdAt: new Date().toISOString()
   };
+
+  setTasks((prev) => [task, ...prev]);
+};
 
   const deleteTask = (id) => {
     setTasks(prev =>
