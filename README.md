@@ -1,5 +1,5 @@
 # 🚀 Planify Pro (Planify-V3)
-planify V3 or Pro is the plainify Version 3 of the the App
+planify V3 or Pro is the plainify Version 3
 
 A modern productivity and task management application built with **React**, **Vite**, and **Chart.js**.
 ---
