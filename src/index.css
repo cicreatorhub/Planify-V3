@@ -762,3 +762,57 @@ grid-template-columns:1fr;
         cursor:pointer;
     }
 }
+
+/* ==========================================
+   Extra Small Phones (≤380px)
+   Galaxy S8, older Android devices, etc.
+========================================== */
+
+@media (max-width:380px){
+
+    /* Greeting */
+    .header-left h3{
+        font-size:1rem;
+        line-height:1.2;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    /* Hide task count */
+    .header-left p{
+        display:none;
+    }
+
+    /* Smaller spacing */
+    .header{
+        padding:12px 14px;
+    }
+
+    .header-left{
+        gap:10px;
+    }
+
+    .header-right{
+        gap:8px;
+    }
+
+    /* Smaller buttons */
+    .icon-btn,
+    .menu-btn{
+        width:40px;
+        height:40px;
+    }
+
+    /* Smaller avatar */
+    .avatar{
+        width:40px;
+        height:40px;
+        font-size:0.9rem;
+    }
+
+    /* Reduce search width if visible */
+    .search-box{
+        max-width:140px;
+    }
+}
