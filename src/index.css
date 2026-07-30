@@ -269,6 +269,36 @@ body.dark .icon-btn{
     font-weight:bold;
 }
 
+.menu-btn{
+    display:none;
+    width:44px;
+    height:44px;
+    border:none;
+    background:#f3f4f6;
+    border-radius:12px;
+    align-items:center;
+    justify-content:center;
+    margin-right:16px;
+}
+
+body.dark .menu-btn{
+    background:#27272a;
+    color:white;
+}
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:flex;
+    }
+
+    .header-left{
+        display:flex;
+        align-items:center;
+    }
+
+}
+
 /* ===================================================
    SIDEBAR
 =================================================== */
