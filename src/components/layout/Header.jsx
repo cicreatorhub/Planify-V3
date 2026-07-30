@@ -5,13 +5,11 @@ export default function Header({ sidebarOpen, setSidebarOpen }) {
   const { darkMode, setDarkMode, stats } = useTasks();
 
   const greeting = () => {
-    const hour = new Date().getHours();
-
-    if (hour < 12) return "Good Morning ☀️";
-    if (hour < 18) return "Good Afternoon 🌤️";
-
-    return "Good Evening 🌙";
-  };
+  const hour = new Date().getHours();
+  const isSmallScreen = window.innerWidth <= 380;
+  if (hour < 12) { return isSmallScreen ? "Morning ☀️" : "Good Morning ☀️"; }
+  if (hour < 18) { return isSmallScreen ? "Afternoon 🌤️" : "Good Afternoon 🌤️";  }
+  return isSmallScreen ? "Evening 🌙" : "Good Evening 🌙";};
 
   return (
     <header className="header">
