@@ -1,7 +1,7 @@
-import { Moon, Sun, Bell, Search } from "lucide-react";
+import { Menu, Moon, Sun, Bell, Search } from "lucide-react";
 import { useTasks } from "../../context/TaskContext";
 
-export default function Header() {
+export default function Header({ sidebarOpen, setSidebarOpen }) {
   const { darkMode, setDarkMode, stats } = useTasks();
 
   const greeting = () => {
@@ -18,11 +18,22 @@ export default function Header() {
 
       <div className="header-left">
 
-        <h3>{greeting()}</h3>
+        {/* Mobile Hamburger */}
+        <button
+          className="menu-btn"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          aria-label="Open Menu"
+        >
+          <Menu size={22} />
+        </button>
 
-        <p>
-          {stats.pending} task{stats.pending !== 1 ? "s" : ""} remaining
-        </p>
+        <div>
+          <h3>{greeting()}</h3>
+
+          <p>
+            {stats.pending} task{stats.pending !== 1 ? "s" : ""} remaining
+          </p>
+        </div>
 
       </div>
 
