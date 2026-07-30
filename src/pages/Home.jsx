@@ -3,6 +3,7 @@ import Progress from "../components/dashboard/Progress";
 import ProductivityChart from "../components/dashboard/ProductivityChart";
 import TaskForm from "../components/tasks/TaskForm";
 import TaskList from "../components/tasks/TaskList";
+import KanbanBoard from "../components/kanban/KanbanBoard";
 
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
       <TaskForm />
 
       <TaskList />
+      <KanbanBoard />
 
     </div>
   );
