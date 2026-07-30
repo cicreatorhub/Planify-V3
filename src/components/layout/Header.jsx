@@ -18,7 +18,7 @@ export default function Header() {
 
       <div className="header-left">
 
-        <h1>{greeting()}</h1>
+        <h3>{greeting()}</h3>
 
         <p>
           {stats.pending} task{stats.pending !== 1 ? "s" : ""} remaining
@@ -30,7 +30,7 @@ export default function Header() {
 
         <div className="search-box">
 
-          <Search size={18} />
+          <Search size={16} />
 
           <input
             type="text"
@@ -47,7 +47,7 @@ export default function Header() {
           className="icon-btn"
           title="Notifications"
         >
-          <Bell size={20} />
+          <Bell size={16} />
         </button>
 
         <button
@@ -56,9 +56,9 @@ export default function Header() {
           onClick={() => setDarkMode(!darkMode)}
         >
           {darkMode ? (
-            <Sun size={20} />
+            <Sun size={16} />
           ) : (
-            <Moon size={20} />
+            <Moon size={16} />
           )}
         </button>
 
