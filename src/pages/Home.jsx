@@ -1,7 +1,9 @@
 import Stats from "../components/dashboard/Stats";
 import Progress from "../components/dashboard/Progress";
+import ProductivityChart from "../components/dashboard/ProductivityChart";
 import TaskForm from "../components/tasks/TaskForm";
 import TaskList from "../components/tasks/TaskList";
+
 
 export default function Home() {
   return (
@@ -25,7 +27,9 @@ export default function Home() {
       <Stats />
 
       <Progress />
-
+      
+    <ProductivityChart />
+      
       <TaskForm />
 
       <TaskList />
