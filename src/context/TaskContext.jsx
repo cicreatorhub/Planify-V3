@@ -81,17 +81,20 @@ export function TaskProvider({ children }) {
   };
 
   const toggleTask = (id) => {
-    setTasks(prev =>
-      prev.map(task =>
-        task.id === id
-          ? {
-              ...task,
-              completed: !task.completed
-            }
-          : task
-      )
-    );
-  };
+  setTasks((prev) =>
+    prev.map((task) =>
+      task.id === id
+        ? {
+            ...task,
+            completed: !task.completed,
+            completedAt: !task.completed
+              ? new Date().toISOString()
+              : null
+          }
+        : task
+    )
+  );
+};
 
   const updateTask = (id, values) => {
     setTasks(prev =>
