@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { format, isSameDay } from "date-fns";
 import { CalendarDays } from "lucide-react";
 import { useTasks } from "../context/TaskContext";
+import MonthlyCalendar from "../components/calendar/MonthlyCalendar";
 
 export default function Calendar() {
   const { tasks } = useTasks();
@@ -52,8 +53,9 @@ export default function Calendar() {
           </p>
 
         </div>
-
       </div>
+      
+      <MonthlyCalendar tasks={tasks} />
 
       <section className="card">
 
