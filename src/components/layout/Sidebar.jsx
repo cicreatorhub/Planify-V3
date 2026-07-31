@@ -12,7 +12,8 @@ import { NavLink } from "react-router-dom";
 
 export default function Sidebar({
   sidebarOpen,
-  setSidebarOpen
+  setSidebarOpen,
+  setTaskModalOpen
 }) {
   const menu = [
     {
@@ -60,14 +61,20 @@ export default function Sidebar({
 
           <div>
             <h2>Planify</h2>
-            <small>Productivity Pro</small>
+            <small>Productivity Manager</small>
           </div>
         </div>
 
-        <button className="new-task-btn">
-          <PlusCircle size={16} />
-          <span>New Task</span>
-        </button>
+        <button
+  className="new-task-btn"
+  onClick={() => {
+    setTaskModalOpen(true);
+    setSidebarOpen(false); // closes the mobile sidebar if it's open
+  }}
+>
+  <PlusCircle size={16} />
+  <span>New Task</span>
+</button>
 
         <nav className="sidebar-nav">
           {menu.map((item) => (
@@ -93,9 +100,11 @@ export default function Sidebar({
           </button>
 
           <p className="version">
-            Planify Pro
+            Planify
             <br />
             Version 1.0.0
+            <br />
+            cicreator-Hub
           </p>
         </div>
       </aside>
